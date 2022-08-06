@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import getOptions from "./option-util.js";
+import getOptions from "./services/options.js";
 
 const initApp = () => {
   const options = getOptions();
