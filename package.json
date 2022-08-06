@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A console application that provides city weather data",
   "main": "index.js",
+  "type": "module",
   "bin": {
     "weather": "index.js"
   },
@@ -24,7 +25,10 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "prettier": "^2.7.1",
-    "husky": "^8.0.0"
+    "husky": "^8.0.0",
+    "prettier": "^2.7.1"
+  },
+  "dependencies": {
+    "commander": "^9.4.0"
   }
 }
