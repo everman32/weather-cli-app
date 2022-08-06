@@ -10,9 +10,9 @@
   "scripts": {
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepare": "husky install",
     "lint": "eslint --ext .js .",
-    "lint:fix": "eslint --ext .js --fix ."
+    "lint:fix": "eslint --ext .js --fix .",
+    "prepare": "husky install"
   },
   "keywords": [
     "weather",
@@ -27,7 +27,7 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "husky": "^8.0.0",
+    "husky": "^8.0.1",
     "prettier": "^2.7.1"
   },
   "dependencies": {
