@@ -29,6 +29,7 @@
     "prettier": "^2.7.1"
   },
   "dependencies": {
+    "chalk": "^5.0.1",
     "commander": "^9.4.0"
   }
 }
