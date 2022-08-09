@@ -63,12 +63,17 @@ const getForcast = async (appid, city, units) => {
   }
 };
 
-const initApp = () => {
-  const options = getOptions();
-  console.log(options);
-  if (options.token) {
-    return saveToken(options.token);
+const initApp = async () => {
+  let { appid, city, units } = getOptions();
+
+  appid = await resolveConfig({ appid });
+  city = await resolveConfig({ city });
+  units = await resolveConfig({ units });
+
+  if (appid && city) {
+    getForcast(appid, city, units);
   }
+
   return 0;
 };
 
