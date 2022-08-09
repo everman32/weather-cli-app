@@ -46,10 +46,18 @@ const resolveConfig = async (object) => {
   return value;
 };
 
-const saveToken = async (token) => {
+const getForcast = async (appid, city, units) => {
   try {
-    await writeKeyValue("token", token);
-    printSuccess("Token saved");
+    const { lat, lon } = await getCoordinatesByCity(city, appid);
+    const weather = await getWeatherByCoordinates(lat, lon, appid, units);
+
+    const descriptions = {
+      temp: units === "metric" ? "°C" : "°F",
+      speed: units === "metric" ? "m/s" : "m/h",
+      percent: "%",
+    };
+
+    printWeather(weather, descriptions);
   } catch (e) {
     printError(e.message);
   }
