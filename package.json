@@ -1,5 +1,5 @@
 {
-  "name": "weather-cli-app",
+  "name": "weather-cli-pro",
   "version": "1.0.0",
   "description": "A console application that provides city weather data",
   "main": "index.js",
