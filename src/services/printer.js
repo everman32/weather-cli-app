@@ -17,7 +17,7 @@ const printWeather = (weather, descriptions) => {
       weather.main.feels_like
     }${descriptions.temp})
   Humidity: ${weather.main.humidity}${descriptions.percent}
-  Wind speed: ${weather.wind.speed}${descriptions.speed}`
+  Wind speed: ${weather.wind.speed}${descriptions.speed}`,
   );
 };
 

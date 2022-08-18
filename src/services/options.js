@@ -6,19 +6,19 @@ const getOptions = () => {
     .addOption(
       new Option(
         "-c, --city <string>",
-        "specify the city for which you want to know the weather"
-      )
+        "specify the city for which you want to know the weather",
+      ),
     )
     .addOption(
       new Option(
         "-a, --appid <string>",
-        "determine the appid used to access the weather API"
-      )
+        "determine the appid used to access the weather API",
+      ),
     )
     .addOption(
       new Option("-u, --units <string>", "define units of measurement")
         .choices(["metric", "imperial"])
-        .default("metric")
+        .default("metric"),
     )
     .parse();
 
