@@ -17,6 +17,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint %npm_package_config_srcPath% --ext %npm_package_config_srcExtensions%",
     "lint:fix": "eslint %npm_package_config_srcPath% --ext %npm_package_config_srcExtensions% --fix",
+    "prit": "prettier --write %npm_package_config_srcPath%%npm_package_config_srcExtensions%",
     "prepare": "husky install"
   },
   "keywords": [
