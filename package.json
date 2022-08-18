@@ -7,15 +7,16 @@
     "srcPath": "src/**/*",
     "srcExtensions": ".js"
   },
+  "main": "%npm_package_config_startPointPath%",
   "type": "module",
   "bin": {
-    "weather": "src/index.js"
+    "weather": "%npm_package_config_startPointPath%"
   },
   "scripts": {
-    "start": "node src/index.js",
+    "start": "node %npm_package_config_startPointPath%",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint --ext .js .",
-    "lint:fix": "eslint --ext .js --fix .",
+    "lint": "eslint %npm_package_config_srcPath% --ext %npm_package_config_srcExtensions%",
+    "lint:fix": "eslint %npm_package_config_srcPath% --ext %npm_package_config_srcExtensions% --fix",
     "prepare": "husky install"
   },
   "keywords": [
