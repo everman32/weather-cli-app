@@ -2,7 +2,11 @@
   "name": "weather-cli-pro",
   "version": "1.0.0",
   "description": "A console application that provides city weather data",
-  "main": "src/index.js",
+  "config": {
+    "startPointPath": "src/index.js",
+    "srcPath": "src/**/*",
+    "srcExtensions": ".js"
+  },
   "type": "module",
   "bin": {
     "weather": "src/index.js"
