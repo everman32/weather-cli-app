@@ -2,22 +2,17 @@
   "name": "weather-cli-pro",
   "version": "1.0.0",
   "description": "A console application that provides city weather data",
-  "config": {
-    "startPointPath": "src/index.js",
-    "srcPath": "src/**/*",
-    "srcExtensions": ".js"
-  },
-  "main": "%npm_package_config_startPointPath%",
+  "main": "src/index.js",
   "type": "module",
   "bin": {
-    "weather": "%npm_package_config_startPointPath%"
+    "weather": "src/index.js"
   },
   "scripts": {
-    "start": "node %npm_package_config_startPointPath%",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint %npm_package_config_srcPath% --ext %npm_package_config_srcExtensions%",
-    "lint:fix": "eslint %npm_package_config_srcPath% --ext %npm_package_config_srcExtensions% --fix",
-    "prit": "prettier --write %npm_package_config_srcPath%%npm_package_config_srcExtensions%",
+    "start": "node src/index.js",
+    "lint": "eslint src/**/* --ext .js",
+    "lint:fix": "npm run lint -- --fix",
+    "prit": "prettier --check src/**/*.js",
+    "prit:fix": "prettier --write src/**/*.js",
     "prepare": "husky install"
   },
   "keywords": [
