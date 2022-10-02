@@ -10,7 +10,7 @@ const getWeatherByCoordinates = async (lat, lon, appid, units) => {
         appid,
         units,
       },
-    },
+    }
   );
   return data;
 };

@@ -8,7 +8,7 @@ const getCoordinatesByCity = async (city, appid) => {
         q: city,
         appid,
       },
-    },
+    }
   );
   return { lat: data[0].lat, lon: data[0].lon };
 };
