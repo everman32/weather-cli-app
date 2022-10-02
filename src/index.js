@@ -14,18 +14,17 @@ const setConfig = async (object) => {
     if ((await writeObjectToFile(object)) === 0) {
       printSuccess(`${Object.keys(object)[0]} saved`);
     }
-  } catch (e) {
-    printError(e.message);
+  } catch (error) {
+    printError(error.message);
   }
 };
 
 const getConfig = async (object) => {
   try {
     const key = Object.keys(object)[0];
-    const value = await readValueFromFile(key);
-    return value;
-  } catch (e) {
-    printError(e.message);
+    return await readValueFromFile(key);
+  } catch (error) {
+    printError(error.message);
     return 0;
   }
 };
@@ -58,8 +57,8 @@ const getForcast = async (appid, city, units) => {
     };
 
     printWeather(weather, descriptions);
-  } catch (e) {
-    printError(e.message);
+  } catch (error) {
+    printError(error.message);
   }
 };
 
@@ -77,4 +76,4 @@ const initApp = async () => {
   return 0;
 };
 
-initApp();
+await initApp();

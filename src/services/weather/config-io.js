@@ -1,6 +1,7 @@
-import { homedir } from "os";
-import { join } from "path";
-import { promises } from "fs";
+import { homedir } from "node:os";
+import { join } from "node:path";
+import { promises } from "node:fs";
+import { printError } from "../printer.js";
 
 const filePath = join(homedir(), "weather-config.json");
 
@@ -9,7 +10,8 @@ const isFileExist = async () => {
     await promises.stat(filePath);
 
     return true;
-  } catch (e) {
+  } catch (error) {
+    printError(error.message);
     return false;
   }
 };
@@ -22,7 +24,8 @@ const readDataFromFile = async () => {
       data = JSON.parse(file);
     }
     return data;
-  } catch (e) {
+  } catch (error) {
+    printError(error.message);
     return 1;
   }
 };
@@ -32,7 +35,8 @@ const readValueFromFile = async (key) => {
     const data = await readDataFromFile();
 
     return data[key];
-  } catch (e) {
+  } catch (error) {
+    printError(error.message);
     return 1;
   }
 };
@@ -49,7 +53,8 @@ const writeObjectToFile = async (object) => {
       return 0;
     }
     return 1;
-  } catch (e) {
+  } catch (error) {
+    printError(error.message);
     return 2;
   }
 };
