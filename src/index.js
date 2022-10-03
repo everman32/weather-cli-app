@@ -47,8 +47,13 @@ const resolveConfig = async (object) => {
 
 const getForcast = async (appid, city, units) => {
   try {
-    const { lat, lon } = await getCoordinatesByCity(city, appid);
-    const weather = await getWeatherByCoordinates(lat, lon, appid, units);
+    const data = await getCoordinatesByCity(city, appid);
+    const weather = await getWeatherByCoordinates(
+      data[0].lat,
+      data[0].lon,
+      appid,
+      units
+    );
 
     const descriptions = {
       temp: units === "metric" ? "°C" : "°F",

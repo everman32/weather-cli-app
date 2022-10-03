@@ -1,16 +1,19 @@
-import axios from "axios";
+import fetch from "node-fetch";
+import { printError } from "../printer.js";
 
 const getCoordinatesByCity = async (city, appid) => {
-  const { data } = await axios.get(
-    "http://api.openweathermap.org/geo/1.0/direct",
-    {
-      params: {
+  try {
+    const response = await fetch(
+      `http://api.openweathermap.org/geo/1.0/direct?${new URLSearchParams({
         q: city,
         appid,
-      },
-    }
-  );
-  return { lat: data[0].lat, lon: data[0].lon };
+      })}`
+    );
+    return await response.json();
+  } catch (error) {
+    printError(error.message);
+    return 0;
+  }
 };
 
 export default getCoordinatesByCity;

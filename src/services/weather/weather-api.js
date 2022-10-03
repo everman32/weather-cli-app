@@ -1,18 +1,21 @@
-import axios from "axios";
+import fetch from "node-fetch";
+import { printError } from "../printer.js";
 
 const getWeatherByCoordinates = async (lat, lon, appid, units) => {
-  const { data } = await axios.get(
-    "https://api.openweathermap.org/data/2.5/weather",
-    {
-      params: {
+  try {
+    const response = await fetch(
+      `https://api.openweathermap.org/data/2.5/weather?${new URLSearchParams({
         lat,
         lon,
         appid,
         units,
-      },
-    }
-  );
-  return data;
+      })}`
+    );
+    return await response.json();
+  } catch (error) {
+    printError(error.message);
+    return 0;
+  }
 };
 
 export default getWeatherByCoordinates;
