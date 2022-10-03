@@ -1,5 +1,5 @@
 import fetch from "node-fetch";
-import { printError } from "../printer.js";
+import { printError } from "../services/printer.js";
 
 const getWeatherByCoordinates = async (lat, lon, appid, units) => {
   try {

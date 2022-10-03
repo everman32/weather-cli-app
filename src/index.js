@@ -1,13 +1,10 @@
 #!/usr/bin/env node
 
 import { printError, printSuccess, printWeather } from "./services/printer.js";
-import {
-  readValueFromFile,
-  writeObjectToFile,
-} from "./services/weather/config-io.js";
-import getCoordinatesByCity from "./services/weather/geocoding-api.js";
+import { readValueFromFile, writeObjectToFile } from "./services/config.js";
+import getCoordinatesByCity from "./api/geocoder.js";
 import getOptions from "./services/options.js";
-import getWeatherByCoordinates from "./services/weather/weather-api.js";
+import getWeatherByCoordinates from "./api/weather.js";
 
 const setConfig = async (object) => {
   try {

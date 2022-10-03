@@ -1,5 +1,5 @@
 import chalk from "chalk";
-import getIcon from "./weather/icons.js";
+import getIcon from "../icons.js";
 
 const printSuccess = (successMessage) => {
   console.log(`${chalk.bgGreen(" SUCCESS ")} ${successMessage}`);

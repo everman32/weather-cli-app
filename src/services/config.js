@@ -1,7 +1,7 @@
 import { homedir } from "node:os";
 import { join } from "node:path";
 import { promises } from "node:fs";
-import { printError } from "../printer.js";
+import { printError } from "./printer.js";
 
 const filePath = join(homedir(), "weather-config.json");
 
