@@ -8,7 +8,6 @@ const filePath = join(homedir(), "weather-config.json");
 const isFileExist = async () => {
   try {
     await promises.stat(filePath);
-
     return true;
   } catch (error) {
     printError(error.message);
@@ -19,10 +18,12 @@ const isFileExist = async () => {
 const readDataFromFile = async () => {
   try {
     let data = {};
+
     if (await isFileExist()) {
       const file = await promises.readFile(filePath);
       data = JSON.parse(file);
     }
+
     return data;
   } catch (error) {
     printError(error.message);
@@ -33,7 +34,6 @@ const readDataFromFile = async () => {
 const readValueFromFile = async (key) => {
   try {
     const data = await readDataFromFile();
-
     return data[key];
   } catch (error) {
     printError(error.message);

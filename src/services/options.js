@@ -21,7 +21,7 @@ const getOptions = () => {
         .default("metric")
     )
     .parse();
-
   return program.opts();
 };
+
 export default getOptions;
