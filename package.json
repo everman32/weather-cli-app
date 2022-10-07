@@ -36,6 +36,6 @@
   "dependencies": {
     "chalk": "^5.0.1",
     "commander": "^9.4.0",
-    "node-fetch": "^3.2.10"
+    "undici": "^5.11.0"
   }
 }
