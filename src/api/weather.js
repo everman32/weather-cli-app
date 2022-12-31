@@ -1,4 +1,3 @@
-import { fetch } from "undici";
 import { printError } from "../services/printer.js";
 
 const getWeatherByCoordinates = async (lat, lon, appid, units) => {
