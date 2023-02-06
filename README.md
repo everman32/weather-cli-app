@@ -2,6 +2,8 @@
 
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/everman32/weather-cli) [![GitHub stars](https://img.shields.io/github/stars/everman32/weather-cli)](https://github.com/everman32/weather-cli/stargazers) [![GitHub forks](https://img.shields.io/github/forks/everman32/weather-cli)](https://github.com/everman32/weather-cli/network) [![GitHub issues](https://img.shields.io/github/issues/everman32/weather-cli)](https://github.com/everman32/weather-cli/issues) [![GitHub license](https://img.shields.io/github/license/everman32/weather-cli)](https://github.com/everman32/weather-cli)
 
+![Output example](https://i.ibb.co/FHNfL3c/output.png)
+
 Weather-cli is a console application that provides city weather data
 
 ## Installation
@@ -48,7 +50,6 @@ For example, for the previously given **appiid**, the resulting output for the c
 ```bash
 npm start -- -c Minsk
 ```
-![Output example](https://i.ibb.co/mH09csD/output.png)
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
