@@ -1,7 +1,7 @@
 {
-  "name": "weather-cli-pro",
+  "name": "weather-cli-app",
   "version": "1.0.0",
-  "description": "A console application that provides city weather data",
+  "description": "Console application providing city weather",
   "main": "src/index.js",
   "type": "module",
   "bin": {
@@ -36,5 +36,13 @@
   "dependencies": {
     "chalk": "^5.0.1",
     "commander": "^9.4.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/everman32/weather-cli-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/everman32/weather-cli-app/issues"
+  },
+  "homepage": "https://github.com/everman32/weather-cli-app#readme"
 }
