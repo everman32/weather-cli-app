@@ -4,9 +4,7 @@
         "node": true
     },
     "extends": [
-        "eslint:recommended",
         "airbnb-base",
-        "plugin:import/recommended",
         "plugin:sonarjs/recommended",
         "plugin:unicorn/recommended",
         "plugin:prettier/recommended"
