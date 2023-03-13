@@ -2,7 +2,7 @@
 
 ![GitHub release (latest by date)](https://img.shields.io/github/v/release/everman32/weather-cli-app) [![GitHub stars](https://img.shields.io/github/stars/everman32/weather-cli-app)](https://github.com/everman32/weather-cli-app/stargazers) [![GitHub forks](https://img.shields.io/github/forks/everman32/weather-cli-app)](https://github.com/everman32/weather-cli-app/network) [![GitHub issues](https://img.shields.io/github/issues/everman32/weather-cli-app)](https://github.com/everman32/weather-cli-app/issues) [![GitHub license](https://img.shields.io/github/license/everman32/weather-cli-app)](https://github.com/everman32/weather-cli-app)
 
-![logo](https://i.ibb.co/BCLv4zw/logo.png)
+![logo](docs/logo.png)
 
 Console application providing city weather
 
@@ -52,7 +52,7 @@ npm start -- -c Minsk
 ```
 Below is the implementation of the above scenario:
 
-![example](https://i.ibb.co/sgb5VYn/example.png)
+![example](docs/example.png)
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
