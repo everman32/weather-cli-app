@@ -35,13 +35,5 @@
   "dependencies": {
     "chalk": "^5.0.1",
     "commander": "^13.0.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/everman32/weather-cli-app.git"
-  },
-  "bugs": {
-    "url": "https://github.com/everman32/weather-cli-app/issues"
-  },
-  "homepage": "https://github.com/everman32/weather-cli-app#readme"
+  }
 }
