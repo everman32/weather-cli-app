@@ -35,7 +35,7 @@ const resolveConfig = async (object) => {
   } else {
     value = await getConfig(object);
 
-    if (typeof value === "undefined") {
+    if (value === undefined) {
       printError(`${key} is not defined`);
     }
   }

@@ -14,8 +14,8 @@ const printWeather = (weather, descriptions) => {
     `${chalk.bgMagenta(" WEATHER ")} Weather in ${weather.name}
   ${getIcon(weather.weather[0].icon)}  ${weather.weather[0].description}
   Temperature: ${weather.main.temp}${descriptions.temp} (Feels like ${
-      weather.main.feels_like
-    }${descriptions.temp})
+    weather.main.feels_like
+  }${descriptions.temp})
   Humidity: ${weather.main.humidity}${descriptions.percent}
   Wind speed: ${weather.wind.speed}${descriptions.speed}`
   );
